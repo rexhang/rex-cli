@@ -1,0 +1,10 @@
+{
+	"tpl": {
+		"create-react-project": {
+			"url": "https://github.com/rexhang/create-react-project.git",
+			"branch": "master",
+			"author": "rexhang",
+			"remark": "create-react-project is a very good scaffolding"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "name": "rex-cli",
+  "version": "1.0.0",
+  "description": "rex-cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "rex-cli": "./bin/rex-cli"
+  },
+  "author": "rexhang",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.9.0",
+    "rimraf": "^3.0.2"
+  }
+}
