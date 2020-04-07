@@ -12,7 +12,9 @@
 [![npm](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rexhang/rex-cli/blob/master/LICENSE)
 
 ### 项目介绍
-[rex-cli] rex-cli scaffolding management system
+[rex-cli] scaffolding management system
+
+[rex-cli] 脚手架管理系统
 
 ### 使用说明
 ``` javascript
