@@ -12,6 +12,8 @@
 /build
 /dist
 
+/source
+
 #ide
 .idea
 

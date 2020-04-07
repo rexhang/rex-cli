@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-/*
-* @author RexHang
-* @date 2020年4月4日, 0004
-* @description 脚手架入口
+/**
+* @author: rexhanggu
+* @email: rexhanggu@tencent.com
+* @date: 2020/4/7 10:41
+* @description：脚手架入口
 */
 
 'use strict';
@@ -49,6 +50,14 @@ program
 	.alias('d')
 	.action(() => {
 		require('../command/delete')()
+	});
+
+program
+	.command('update')
+	.description('更新模板库')
+	.alias('u')
+	.action(() => {
+		require('../command/update')()
 	});
 
 program.parse(process.argv);
