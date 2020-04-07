@@ -9,6 +9,8 @@
 
 const exec = require('child_process').exec;
 
+const progressBar = require('../common/progress-bar.js');
+
 const chalk = require('chalk');
 
 const path = require('path');
@@ -20,6 +22,9 @@ const rootDirectory = path.join(__dirname, '../');
 const sourceDirectory = rootDirectory + 'source/';
 
 global.l = console.log;
+
+// 初始化一个进度条长度为 50 的 ProgressBar 实例
+const pb = new progressBar('进度', 50);
 
 module.exports = () => {
 	l(chalk.white('\n 开始更新模板库...'));
@@ -34,7 +39,7 @@ module.exports = () => {
 			// 强制拉取远程代码
 			cmdStr = `cd ${sourceDirectory} && git fetch --all && git reset --hard origin/master && git pull`;
 		}
-		exec(cmdStr, (error, stdout, stderr) => {
+		const workerProcess = exec(cmdStr, (error, stdout, stderr) => {
 			if (error) {
 				l(chalk.red(error));
 				process.exit();
@@ -50,6 +55,20 @@ module.exports = () => {
 				process.exit();
 			});
 		});
+		let num = 0, total = 100;
+		workerProcess.stdout.on('data', (data) => {
+			console.log(chalk.blue(` => stdout: ${data}`));
+			pb.render({ completed: num, total });
+			num = num + 50;
+		});
+		// workerProcess.stderr.on('data', (data) => {
+		// 	console.log(`stderr: ${data}`);
+		// 	pb.render({ completed: 50, total: 100 });
+		// });
+		// workerProcess.on('close', (code) => {
+		// 	console.log(`child process exited with code ${code}`);
+		// 	pb.render({ completed: 100, total: 100 });
+		// });
 
 	});
 
