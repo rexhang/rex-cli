@@ -18,6 +18,10 @@
 
 ### 使用说明
 ``` javascript
+$ npm install -g rexhang-cli
+```
+
+``` javascript
 $ rex-cli -h
 $ rex-cli init      || i
 $ rex-cli add       || a
