@@ -1,7 +1,7 @@
 # rex-cli
-[rex-cli] rex-cli is a very easy to use scaffolding management system
+[rex-cli] is a very easy to use scaffolding management system
 
-[rex-cli] rex-cli 是一款非常好用的脚手架管理系统
+[rex-cli] 是一款非常好用的脚手架管理系统
 
 ### 基础运行环境
 ![node](https://img.shields.io/badge/node_version->=9.10.0-green.svg?style=plastic)

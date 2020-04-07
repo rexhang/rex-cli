@@ -24,7 +24,7 @@ const sourceDirectory = rootDirectory + 'source/';
 global.l = console.log;
 
 // 初始化一个进度条长度为 50 的 ProgressBar 实例
-const pb = new progressBar('进度', 50);
+const pb = new progressBar('进度', 20);
 
 module.exports = () => {
 	l(chalk.white('\n 开始更新模板库...'));

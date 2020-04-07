@@ -15,17 +15,19 @@ function ProgressBar(description, bar_length){
 		// 拼接黑色条
 		var cell = '';
 		for (var i=0;i<cell_num;i++) {
-			cell += '█';
+			// cell += '█';
+			cell += '☑';
 		}
 
 		// 拼接灰色条
 		var empty = '';
 		for (var i=0;i<this.length-cell_num;i++) {
-			empty += '░';
+			// empty += '░';
+			empty += '☐';
 		}
 
 		// 拼接最终文本
-		var cmdText = this.description + ': ' + (100*percent).toFixed(2) + '% ' + cell + empty + ' ' + opts.completed + '/' + opts.total;
+		var cmdText = this.description + ': ' + (100*percent).toFixed(2) + '% ' + '['+ cell + empty + '] ' + opts.completed + '/' + opts.total;
 
 		// 在单行输出文本
 		slog(cmdText);
