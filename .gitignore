@@ -16,6 +16,7 @@
 
 #ide
 .idea
+.vscode
 
 # misc
 .DS_Store
