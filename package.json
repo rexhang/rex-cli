@@ -1,6 +1,6 @@
 {
-  "name": "rexhang-cli",
-  "version": "1.0.1",
+  "name": "@rexhang/rexhang-cli",
+  "version": "1.0.5",
   "description": "rex-cli",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:rexhang/rex-cli.git"
+    "url": "https://github.com/rexhang/rex-cli.git"
   },
   "author": "rexhang",
   "license": "ISC",
